@@ -23,7 +23,7 @@ def is_comment(line: str) -> bool:
 def alias_parser(file_path: str) -> dict[str, str]:
     result: dict[str, str] = {}
     re_alias_splitter = re.compile(r"[\s=]")
-    with path_from_cli(file_path).open("r") as f_alias:
+    with path_from_cli(file_path).open("r", encoding="utf-8") as f_alias:
         for line in f_alias:
             line = line.strip()
             if not line or is_comment(line):
