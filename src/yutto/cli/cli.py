@@ -150,7 +150,7 @@ def cli() -> argparse.ArgumentParser:
         dest="aliases",
         type=alias_parser,
         default=settings.basic.aliases,
-        help="设置 url 别名文件路径",
+        help="设置 url 别名文件路径（UTF-8 格式）",
     )
     group_basic.add_argument(
         "--metadata-format-premiered",
